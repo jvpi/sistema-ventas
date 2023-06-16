@@ -1,0 +1,191 @@
+body {
+    position: relative;
+    overflow: hidden;
+}
+.template-producto {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+   display: none;
+
+   color: #000;
+}
+
+.icono-width {
+    font-size: 52px;
+}
+.cerrar {
+    position: absolute;
+    right: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    position: relative;
+
+}
+
+.container-tabs {
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    color: #000;
+    font-weight: 600;
+}
+
+.tabs-items {
+    border: 1px solid #ccc;
+
+    padding: 10px;
+    cursor: pointer;
+    background-color: #eee;
+    position: relative;
+    border-bottom: none;
+    top: 1px;
+    z-index: 0;
+}
+.descripcion{
+    width: 112px;
+}
+.precio-dolar{
+    width: 180px;
+}
+.panels {
+    border: solid 1px #ccc;
+}
+
+.active {
+    background-color: #fff;
+    z-index: 20;
+    position: relative;
+    left: 0;
+}
+
+.panels {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+.panels-items {
+    position: absolute;
+    left: -5000px;
+}
+
+.active {
+
+    position: relative;
+    left: 0;
+}
+
+.h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.btn-guardar {
+    background-color: #3983f1;
+    padding: 3px 52px;
+    margin: 15px 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+.form-producto {
+    padding: 15px;
+}
+
+.th-width {
+    width: 108px;
+}
+
+.th-width-Precio-compra {
+    width: 129px;
+}
+
+.h2-producto {
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.container-btn-paginacion {
+    display: flex;
+}
+
+.container-btn-paginacion button {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.btn-editar {
+    cursor: pointer;
+    color: #1351ad;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.btn-eliminar {
+    cursor: pointer;
+    color: #b42b2b;
+    padding: 5px;
+
+}
+
+.centrar-form-editar-producto {
+    width: 21%;
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-guardar-editar-form {
+    background-color: #3983f1;
+    padding: 4px 17px;
+    margin: 15px 0;
+    cursor: pointer;
+    color: #fff;
+    width: 170px;
+}
+
+.estilos-iconos {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.content-icon {
+    width: 100%;
+    height: 20px;
+    position: relative;
+
+}
+
+.red {
+    background-color: #b42b2b;
+}
+
+.modal {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100vh;
+    opacity: .5;
+    background-color: #1351ad;
+    display: none;
+}
+
+.td-stock-utilidad{
+    width: 152px;
+}

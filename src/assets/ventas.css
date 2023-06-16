@@ -1,0 +1,132 @@
+body{
+    position: relative;
+}
+.ventas{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+   overflow: scroll;
+  display: none;
+  color: #000;
+}
+.btn-producto{
+    margin: 15px 0;
+}
+.inline{
+    display: inline;
+    font-weight: 700;
+}
+.container-form{
+    display: flex;
+    width: 95%;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    margin: 10px auto;
+}
+.form-ventas{
+    width: 30%;
+    border-left: 1px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+ 
+}
+.form-ventas input{
+    font-weight: 530;
+   color: #000;
+}
+.container-producto{
+    width: 70%;
+   padding: 10px  0;
+  height: 300px;
+  overflow: scroll;
+}
+.container-producto table{
+  margin-top: 7px;
+  
+}
+.btn-ventas{
+    background-color: #2ad34e;
+    padding: 3px 52px;
+    margin: 15px 0;
+    cursor: pointer;
+   color: #000;
+   font-weight: 700;
+}
+.mas{
+    font-size: 1.4em;
+}
+.total-ventas{
+    width: 95%;
+    border: 1px solid #000;
+   margin: 10px auto;
+  height: 200px;
+  overflow: scroll;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+
+}
+.table-height{
+    width: 100%;
+    
+   
+}
+
+.terminar-venta{
+    width: 95%;
+    border: 1px solid #000;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.container-btn-realizar-venta{
+    width: 50%;
+   
+}
+.container-total-pagar{
+    width: 50%;
+    
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: red;
+}
+.container-total-pagar input{
+  
+    color: #000;
+    font-weight: 600;
+}
+.container-total-pagar label{
+    margin-right: 10px;
+    font-weight: 600;
+    color: #000;
+}
+.cerrar-ventas{
+    border: 1px solid #000;
+}
+.icon-cross{
+    margin-right: 5px;
+
+}
+.btn-producto{
+    width: 95%;
+    border-bottom: 1px solid #000;
+    margin-top: 15px;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    font-size: 1.3em;
+}
+.btn-producto button{
+  cursor: pointer;
+    
+}
+
+#btn-actualizar{
+    cursor: pointer;
+}

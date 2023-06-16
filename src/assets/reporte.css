@@ -1,0 +1,55 @@
+body {
+    position: relative;
+}
+
+.reporte {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+    color: #000;
+}
+
+.container-reporte {
+    width: 98%;
+    height: 80vh;
+    border: solid 1px #a0a0a0;
+    margin: 10px auto;
+    overflow: scroll;
+}
+
+.tabla-reporte {
+    width: 95%;
+    margin: 0px auto;
+    padding: 15px;
+   
+}
+.total-reporte {
+    width: 100%;
+    border: 1px solid #000;
+  
+    
+}
+.container-date{
+    display: flex;
+}
+
+.container-input-fecha-date{
+    width: 30%;
+  
+}
+.container-vetas-del-dia{
+    width: 70%;
+   
+    position: relative;
+}
+.ventas-total{
+    position: absolute;
+    right: 10px;
+}
+.ventas-total-h2{
+    font-size: 1.4em;
+    font-weight: 600;
+}

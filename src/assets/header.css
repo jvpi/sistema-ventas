@@ -1,0 +1,24 @@
+.header{
+    width: 100%;
+    display: flex;
+    background-color: #2A2F4F;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.img{
+    width: 77px;
+    background-color: #fff;
+    border-radius: 9%;
+    padding: 15px;
+}
+
+.nombre{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.2em;
+    font-weight: 700;
+}

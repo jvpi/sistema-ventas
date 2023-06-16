@@ -1,0 +1,18 @@
+body{
+    position: relative;
+}
+.stock{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+   color: #000;
+  display: none;
+}
+.tabla-stock{
+  width: 50%;
+  border: 1px solid #000;
+  margin: 10px auto;
+  overflow:  scroll;
+}

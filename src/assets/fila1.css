@@ -1,0 +1,44 @@
+.fila1{
+    display:  flex;
+    justify-content: space-around;
+}
+.componentes{
+    width: 12%;
+    height: 148px;
+    background-color: #2A2F4F;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1px solid black;
+    color: #fff;
+    border-radius: 9%;
+    
+}
+.incono{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    position: relative;
+}
+.centrar{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.icono-centra{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.icono-width{
+   font-size: 85px;
+}
+.descripcion{
+    text-align: center;
+}
+
+
+.componentes:hover{
+    background-color: #20243d;
+}

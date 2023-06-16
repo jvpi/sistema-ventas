@@ -1,0 +1,91 @@
+body {
+    position: relative;
+}
+
+.credito {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+    color: #000;
+}
+.cerrar-credito {
+    border: 1px solid #000;
+}
+.form-credito {
+    width: 40%;
+    border-left: 1px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.container-credito {
+    width: 100%;
+}
+
+.red{
+    background-color: rgb(219, 218, 218);
+}
+.flex-tabla-credito {
+    display: flex;
+    width: 50%;
+}
+
+.modal-credito{
+    background-color: rgb(255, 255, 255);
+    padding: 40px ;
+    position: absolute;
+    display: none;
+}
+.cursor-pointer-cliente{
+    cursor: pointer;
+}
+.h2-registrar-cliente{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.input-cliente{
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+.btn-cliente{
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    padding: 3px;
+    color: #fff;
+}
+.btn-guardar-credito{
+    background-color: #2ad34e;
+    padding: 3px 24px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 700;
+}
+.bg-blue{
+    border: 1px solid blue;
+    background-color: #1c87c9;
+}
+
+.bg-red{
+    border: 1px solid rgb(252, 46, 46);
+    background-color: rgb(236, 66, 66);
+}
+
+.flex-tabla-venta{
+    display: flex;
+}
+
+.container-abonar-credito{
+    display: none;
+}
+.container-input-monto-adquirido{
+    display: none;
+}
+

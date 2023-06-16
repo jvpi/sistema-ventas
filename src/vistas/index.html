@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="../assets/estilos.css">
+    <link rel="stylesheet" href="../assets/reset.css">
+    <link rel="stylesheet" href="../assets/fila1.css">
+    <link rel="stylesheet" href="../assets/iconos/style.css">
+    <link rel="stylesheet" href="../assets/header.css">
+    <link rel="stylesheet" href="../assets/temaplaProducto.css">
+    <link rel="stylesheet" href="../assets/iconos/cross/style.css">
+    <link rel="stylesheet" href="../assets/ventas.css">
+    <link rel="stylesheet" href="../assets/credito.css">
+    <link rel="stylesheet" href="../assets/reporte.css">
+    <link rel="stylesheet" href="../assets/stock.css">
+    <link rel="stylesheet" href="../assets/herramientas.css">
+    <link rel="stylesheet" href="../assets/iconos/diskette/style.css">
+    <link rel="stylesheet" href="../assets/iconos/editar-eliminar/style.css">
+    <script defer src="index.js"></script>
+    <script src="../assets/js/app.js" defer type="module"></script>
+    <title>Sistema de ventas </title>
+</head>
+
+<body>
+    <div>
+        <button id="btn-actualizar">Actualizar</button>
+    </div>
+    <div id="container-template-producto" class="template-producto">
+        <div class="header">
+            <div class="container-img">
+                <span class="icon-cart  icono-width"></span>
+            </div>
+            <div class="nombre">
+                <span>Productos</span>
+            </div>
+            <div class="cerrar cerrar-ventas" id="cerrar">
+                <span class="icon-cross"></span>
+                <span>Salir</span>
+            </div>
+        </div>
+        <main class="main">
+            <div id="container-form-editar-producto" class="">
+
+            </div>
+            <div class="modal" id="modal"></div>
+            <div class="container-tabs">
+                <ul class="tabs" id="tabs">
+                    <li class="tabs-items active">Tab1</li>
+                    <li class="tabs-items">Nuevo Producto</li>
+
+                </ul>
+                <button id="actualizar">actualizar</button>
+                <div class="panels">
+                    <div class="panels-items active">
+                        <div class="container-reporte container-producto">
+                            <div class="tabla-reporte">
+                                <h2 class="h2-producto">Catalogo de producto</h2>
+                                <div>
+                                    <input type="text" id="buscador" placeholder="Buscar">
+                                    <span class="icon-search "></span>
+                                </div>
+                                <div class="total-reporte height" id="">
+                                    <table id="tabla-producto" class="table-height">
+                                        <thead id="thead1">
+                                            <tr>
+                                                <th>Codigo</th>
+                                                <th>Descripción</th>
+                                                <th class="th-width-Precio-compra">Precio compra</th>
+                                                <th class="th-width">Precio venta</th>
+                                                <th class="th-width">Utilidad</th>
+                                                <th class="th-width">Stock</th>
+                                                <th class="th-width">Stock minimo</th>
+                                                <td>Fecha</td>
+                                                <td id="asda">editar</td>
+
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="container-btn-paginacion" id="btn-paginacion">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-reporte overflow ">
+
+                        </div>
+                    </div>
+                    <div class="panels-items">
+                        <h2 class="h2">Agregar nuevo producto</h2>
+                        <form action="" class="form-producto" id="form-producto">
+                            <div class="inputs-alineacion">
+                                <div class="width-label">
+                                    <label for="textNombre">Código</label>
+                                </div>
+                                <div>
+
+                                    <input type="text" id="textNombre"  required name="codigoProducto"
+                                        class="estilos-inputs">
+                                </div>
+
+                            </div>
+                            <div class="inputs-alineacion">
+                                <div class="width-label">
+                                    <label for="inputCorreo">Descripción</label>
+                                </div>
+                                <div>
+                                    <input type="text" id="inputCorreo" required name="descripcionProducto"
+                                        class="estilos-inputs">
+                                </div>
+
+
+                            </div>
+                            <div class="inputs-alineacion">
+                                <div class="width-label"><label for="inputCiudad">Precio compra</label></div>
+                                <div>
+                                    <input type="text" class="estilos-inputs" required name="precioCompraProducto"
+                                        id="inputCiudad">
+                                </div>
+                            </div>
+                            <div class="inputs-alineacion">
+                                <div class="width-label"><label for="inputCiudad">Precio Venta</label></div>
+                                <div>
+                                    <input type="text" class="estilos-inputs" required name="precioVentaProducto"
+                                        id="inputCiudad">
+                                </div>
+                            </div>
+                            <div class="inputs-alineacion">
+                                <div class="width-label"><label for="inputCiudad">Stock </label></div>
+                                <div>
+                                    <input type="number" class="estilos-inputs" required name="stockProducto"
+                                        id="inputCiudad">
+                                </div>
+                            </div>
+                            <div class="inputs-alineacion">
+                                <div class="width-label"><label for="inputCiudad">Stock Minimo</label></div>
+                                <div>
+                                    <input type="number" class="estilos-inputs" required name="stockMinimoProducto"
+                                        id="inputCiudad">
+                                </div>
+                            </div>
+                            <button class="btn-guardar">
+                                <span class="icon-credit-card"></span>
+                                <span> Guardar</span>
+                            </button>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="ventas" id="container-template-venta">
+        <div class="header">
+            <div class="container-img">
+                <span class="icon-credit-card  icono-width"></span>
+            </div>
+            <div class="nombre">
+                <span>Registrar Nueva Ventas</span>
+            </div>
+            <div class="cerrar cerrar-ventas" id="cerrar-ventas">
+                <span class="icon-cross"></span>
+                <span>Salir</span>
+            </div>
+        </div>
+
+        <div class="container-form">
+            <div class="container-producto">
+                <div>
+                    <input type="text" id="buscador-ventas" placeholder="Buscar">
+                    <span class="icon-search "></span>
+                </div>
+                <table id="table-venta" class="table-height">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+
+                </table>
+                <div class="container-btn-paginacion" id="btn-paginacion-venta">
+
+                </div>
+            </div>
+            <form action="" id="form-ventas" class="form-ventas">
+                <div class="inputs-alineacion">
+                    <div class="width-label">
+                        <label for="textNombre" class="inline">Descripción</label>
+                    </div>
+                    <div>
+                        <input type="text" id="descripcion-venta" name="descripcion" disabled class="estilos-inputs">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="textNombre" class="inline">Cantidad</label>
+                    </div>
+
+                    <input type="number" id="cantidad-venta" min="1" name="cantidad" placeholder="0">
+
+                    <div>
+                        <label for="textNombre" class="inline">Precio Venta</label>
+                    </div>
+
+                    <input type="text" id="precio-venta" name="precioVenta" disabled>
+                    <div>
+                        <label for="textNombre" class="inline">Stock</label>
+                    </div>
+
+                    <input type="text" id="precio-stock" name="stock" disabled>
+                </div>
+                <button class="btn-ventas" id="btn-agregar-ventas">
+                    <span class="mas">+</span>
+                    <span>Agregar</span>
+                </button>
+            </form>
+        </div>
+        <div class="total-ventas">
+            <table id="table-venta-total">
+                <thead>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                    <th>Fecha</th>
+                </thead>
+            </table>
+
+
+        </div>
+        <div class="terminar-venta">
+            <div class="container-btn-realizar-venta">
+                <button class="btn-ventas" id="realizar-venta">
+                    <span class="icon-credit-card "></span>
+                    <span>Realizar Venta</span>
+                </button>
+            </div>
+            <div class="container-total-pagar">
+                <div>
+                    <label for="">Total a pagar en $</label>
+                    <input type="text" id="total-pagar" disabled placeholder="0 $">
+                </div>
+                
+                <div>
+                    <label for="">Total a pagar en Bs</label>
+                    <input type="text" id="total-pagar-dolares" disabled placeholder="0 Bs">
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+    <div class="credito" id="container-template-credito">
+        <div class="">
+            <div class="header">
+                <div class="container-img">
+                    <span class="icon-price-tags  icono-width"></span>
+                </div>
+                <div class="nombre">
+                    <span> Credito</span>
+                </div>
+                <div class="cerrar cerrar-credito" id="cerrar-credito">
+                    <span class="icon-cross"></span>
+                    <span>Salir</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-form">
+
+            <div class="container-producto">
+                <div>
+                    <input type="text" id="buscador-credito" placeholder="Buscar">
+                    <span class="icon-search "></span>
+                </div>
+                <table id="table-credito" class="table-height">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+
+                </table>
+
+            </div>
+            <form action="" id="form-credito" class="form-credito">
+                <div class="inputs-alineacion">
+                    <div class="width-label">
+                        <label for="textNombre" class="inline">Cliente</label>
+                    </div>
+                    <div>
+                        <input type="text" id="nombre-cliente" class="estilos-inputs" disabled>
+                    </div>
+                </div>
+                <div class="inputs-alineacion">
+                    <div class="width-label">
+                        <label for="textNombre" class="inline">Descripción</label>
+                    </div>
+                    <div>
+                        <input type="text" id="credito-descripcion" disabled class="estilos-inputs">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="textNombre" class="inline">Cantidad</label>
+                    </div>
+
+                    <input type="number" min="1" id="credito-cantidad" placeholder="0">
+
+                    <div>
+                        <label for="textNombre" class="inline">Precio Venta</label>
+                    </div>
+
+                    <input type="text" id="credito-precio-venta" disabled>
+
+                </div>
+                <button class="btn-ventas">
+                    <span class="mas">+</span>
+                    <span>Agregar</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="total-ventas flex-tabla-venta">
+            <div class="flex-tabla-credito">
+                <div>
+                    <table id="table-nombre-cliente">
+                        <thead>
+                            <th>Cliente</th>
+                        </thead>
+                    </table>
+                </div>
+                <div class="">
+                    <button class="cursor-pointer-cliente" id="btn-cliente-credito">Agregar Nuevo Cliente</button>
+                    <input type="text" id="total-pagar-credito" disabled>
+                    <button class="btn-guardar-credito" id="btn-guardar-credito">Guardar Credito</button>
+                    <div class="modal-credito" id="modal-credito">
+                        <div>
+                            <h2 class="h2-registrar-cliente">Registrar Cliente</h2>
+                            <input type="text" class="input-cliente" id="input-cliente" placeholder="nombre" >
+                            <button class="btn-cliente bg-blue" id="btn-cliente-guardar">Guardar</button>
+                            <button class="btn-cliente bg-red" id="btn-cliente-cancelar">Cancelar</button>
+                        </div>
+                      </div>
+
+                </div>
+                <div>
+                    <table id="table-credito-total">
+                        
+                    </table>
+                    
+                </div>
+            </div>
+
+            <div class="container-credito-adquirido">
+                <table class="credito-adquirido" id="credito-adquirido" >
+
+                </table>
+            </div>
+            <div id="container-input-monto-adquirido" class="container-input-monto-adquirido">
+                <input type="text" id="monto-adquirido" disabled>
+               
+               
+            </div>
+            <div id="container-abonar-credito" class="container-abonar-credito">
+                <div>
+                    <label for="">Abonar al credito</label>
+                    <input type="text" id="input-abonar-credito">
+                    <button  id="btn-abonar-credito">Abonar</button>
+                    <button  id="btn-pagar-deuda">Pagar Deuda</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    </div>
+
+    <div class="reporte" id="template-reporte">
+        <div class="header">
+            <div class="container-img">
+                <span class="icon-stats-dots icono-width"></span>
+            </div>
+            <div class="nombre">
+                <span>Reporte</span>
+            </div>
+            <div class="cerrar cerrar-ventas" id="cerrar-reporte">
+                <span class="icon-cross"></span>
+                <span>Salir</span>
+            </div>
+        </div>
+        <div class="container-reporte">
+            <div class="tabla-reporte">
+                <div class="container-date">
+                    <div class="container-input-fecha-date">
+                        <div>
+                            <input type="date" id="input-date">
+                        </div>
+                        <div>
+                            <button id="fecha">buscar</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="container-vetas-del-dia">
+                        <div class="ventas-total">
+                            <h2 class="ventas-total-h2">Ventas Total del dia</h2>
+                            <span class="ventas-total-span" id="ventas-total-span"></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input type="text" id="buscador-reporte" placeholder="Buscar">
+                    <span class="icon-search "></span>
+                </div>
+                <div class="total-reporte">
+
+                    <table id="tabla-reporte" class="table-height">
+                        <thead>
+                            <tr>
+                                <th class="th-width ">Descripción</th>
+                                <th class="th-width">Fecha</th>
+                                <th class="th-width">Cantidad</th>
+                                <th class="th-width">Precio venta</th>
+                                <th class="th-width">Stock </th>
+                                <th class="th-width">Total </th>
+                            </tr>
+                        </thead>        
+                    </table>
+                    
+                    <div class="container-btn-paginacion" id="btn-paginacion-reporte">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="stock" id="template-stock">
+        <div class="header">
+            <div class="container-img">
+                <span class="icon-search  icono-width"></span>
+            </div>
+            <div class="nombre">
+                <span>Stock</span>
+            </div>
+            <div class="cerrar cerrar-ventas" id="cerrar-stock">
+                <span class="icon-cross"></span>
+                <span>Salir</span>
+            </div>
+        </div>
+        <div class="container-reporte">
+            <div class="tabla-reporte">
+            <!--   <div>
+                    <input type="text" id="buscador-stock" placeholder="Buscar">
+                    <span class="icon-search "></span>
+                </div>--> 
+                <div class="tabla-stock">
+
+                    <table id="table-stock" class="table-height">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+
+                            </tr>
+                        </thead>
+
+                    </table>
+                    <div class="container-btn-paginacion" id="btn-paginacion-stock">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="herramienta" id="template-herramientas">
+        <div class="header">
+            <div class="container-img">
+                <span class="icon-cogs  icono-width"></span>
+            </div>
+            <div class="nombre">
+                <span>Herramienta</span>
+            </div>
+            <div class="cerrar cerrar-ventas" id="cerrar-configuracion">
+                <span class="icon-cross"></span>
+                <span>Salir</span>
+            </div>
+        </div>
+        <div class="container-opciones">
+            <div class="border">
+                <h2 class="tasa-actual">
+                    <span>Tasa actual</span>
+                    <span id="tasa-actual">212</span>
+                   
+                </h2>
+                <div class="moneda estilos">
+                   
+                    <div class="container-input">
+                      
+                        <label for="">Precio dolar</label>
+                        <input type="text" id="precio-dolar">
+                    </div>
+                    <div>
+                        <button class="estilos-btn" id="btn-dolar">
+                            <span class="icon-floppy-disk"></span>
+                            Guardar
+                        </button>
+                    </div>
+
+                </div>
+                <div class="moneda estilos">
+
+                    <div class="container-input">
+                        <label for="">Datos negocio</label>
+                        <input type="text" id="input-negocio">
+                    </div>
+
+                    <div>
+                        <button class="estilos-btn" id="btn-nombre">
+                            <span class="icon-floppy-disk"></span>
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="container-img">
+                <img src="../assets/img/tienda.png" alt="" class="img">
+            </div>
+            <div class="nombre">
+                <span id="nombre-negocio">Tiendita tripi</span>
+            </div>
+        </div>
+        <div class="centrar">
+            <div class="fila1">
+                <div class="componentes" id="ventas">
+                    <div class="incono">
+                        <span class="icon-credit-card icono-centra icono-width"></span>
+                    </div>
+                    <div class="descripcion">
+                        <span>ventas</span>
+                    </div>
+                </div>
+                <div class="componentes" id="stock">
+                    <div class="incono">
+                        <span class="icon-search icono-centra icono-width"></span>
+                    </div>
+                    <div class="descripcion">
+                        <span>Stock</span>
+                    </div>
+                </div>
+                <div class="componentes" id="productos">
+                    <div class="incono">
+                        <span class="icon-cart icono-centra icono-width"></span>
+                    </div>
+                    <div class="descripcion">
+                        <span>Productos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila1 ">
+                <div class="componentes" id="credito">
+                    <div class="incono">
+                        <span class="icon-price-tags icono-centra icono-width"></span>
+                    </div>
+                    <div class="descripcion">
+                        <span>Credito</span>
+                    </div>
+                </div>
+                <div class="componentes" id="reporte">
+                    <div class="incono">
+                        <span class="icon-stats-dots icono-centra icono-width"></span>
+                    </div>
+                    <div class="descripcion">
+                        <span>Reporte</span>
+                    </div>
+                </div>
+                <div class="componentes" id="configuracion">
+                    <div class="incono">
+                        <span class="icon-cogs icono-centra icono-width"></span>
+                    </div>
+                    <div class="descripcion">
+                        <span>Herramienta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<img></img>
+
+</html>
